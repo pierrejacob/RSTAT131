@@ -1,0 +1,16 @@
+Package: RSTAT131
+Type: Package
+Title: STAT131 in Harvard - Fall 2018
+Version: 0.1
+Date: 2016-08-25
+Author: Pierre E. Jacob <pjacob@fas.harvard.edu>
+Maintainer: Pierre E. Jacob <pjacob@fas.harvard.edu>
+Description: Companion scripts for the lectures.
+License: What license is it under?
+LazyData: TRUE
+Depends:
+    Rcpp,RcppEigen
+Imports:
+    Rcpp,RcppEigen (>= 0.11.6)
+LinkingTo: Rcpp,RcppEigen
+RoxygenNote: 5.0.1
