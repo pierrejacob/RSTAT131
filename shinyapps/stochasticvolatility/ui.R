@@ -2,7 +2,7 @@
 shinyUI(fluidPage(
   titlePanel("Stochastic Volatility Simulation"),
   withMathJax(),
-  helpText("Model: \\(X_t = \\exp(X_t) \\mathcal{N}(0, 1) \\), and \\(X_t = \\phi X_{t-1} + \\sigma \\mathcal{N}(0, 1)\\)."),
+  helpText("Model: \\(Y_t = \\exp(X_t) \\mathcal{N}(0, 1) \\), and \\(X_t = \\phi X_{t-1} + \\sigma \\mathcal{N}(0, 1)\\)."),
 
   sidebarLayout(position = "right",
                 sidebarPanel(

@@ -8,8 +8,9 @@ R/
 src/
 man/
 inst/
-shinyapps/*zip
+int/shinyapps/*zip
 shinyapps/run*
 shinyapps/*R
+shinyapps/*.zip
 .DS_*
 
