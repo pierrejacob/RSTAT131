@@ -15,7 +15,7 @@ shinyUI(fluidPage(
                      "Earthquake" = "EQ5",
                      "Explosion" = "EXP6",
                      "Temperatures" = "gtemp",
-                     "Chocolate" = "chocolate",
+                     # "Chocolate" = "chocolate",
                      "Gaussian noise" = "gn",
                      "MA(2)" = "ma2",
                      "AR(1)" = "ar1",

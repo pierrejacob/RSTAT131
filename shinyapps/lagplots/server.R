@@ -13,9 +13,9 @@ theme_update(axis.text.x = element_text(size = 20),
 
 set.seed(17)
 
-chocolate <- read.csv("https://sites.google.com/site/pierrejacob/chocolate.csv")
-dates <- as.Date(as.character(chocolate[,1]), format = "%m/%d/%y")
-chocolate <- chocolate[,2]
+# chocolate <- read.csv("https://sites.google.com/site/pierrejacob/chocolate.csv")
+# dates <- as.Date(as.character(chocolate[,1]), format = "%m/%d/%y")
+# chocolate <- chocolate[,2]
 
 cosine <- 2*cos(2*pi/50*(1:1000)) + rnorm(1000)
 
@@ -37,7 +37,7 @@ shinyServer(function(input, output) {
                    speech = speech,
                    EXP6 = EXP6,
                    EQ5 = EQ5,
-                   chocolate = chocolate,
+                   # chocolate = chocolate,
                    cosine = cosine,
                    ma2 = ma2,
                    ar1 = ar1,
