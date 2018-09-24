@@ -59,12 +59,12 @@ shinyServer(function(input, output) {
       }
       maxlag <- min(length(y) - 10, input$lag)
       lags <- 0:maxlag
-      acfvalues <- acf(y, plot = FALSE, lag.max = maxlag)$acf
+      acfvalues <- acf(y, plot = FALSE, lag.max = maxlag)$acf[,,1]
       g <- qplot(x = lags, y = acfvalues, geom = "blank")
       g <- g + geom_segment(aes(xend = lags, yend = 0))
       g <- g + ylab("ACF") + xlab("Lag")
       # dashed blue lines corresponding to confidence interval for the autocorrelation under white noise assumption
-      g <- g + geom_hline(yintercept = +1.96/sqrt(nobs), linetype = 2, colour = "blue")
+      g <- g + geom_hline(yintercept = +1.96/sqrt(nobs), linetype = 2, colour = "blue")+ ylim(-1,1)
       g <- g + geom_hline(yintercept = -1.96/sqrt(nobs), linetype = 2, colour = "blue")
       pol <- polyroot(c(1, input$theta1, input$theta2))
       polpaste <- paste("root", 1:2, ":", round(pol, 2), collapse = "; ")
@@ -98,12 +98,12 @@ shinyServer(function(input, output) {
       }
       maxlag <- min(length(y) - 10, input$lag)
       lags <- 1:maxlag
-      acfvalues <- pacf(y, plot = FALSE, lag.max = maxlag)$acf
+      acfvalues <- pacf(y, plot = FALSE, lag.max = maxlag)$acf[,,1]
       g <- qplot(x = lags, y = acfvalues, geom = "blank")
       g <- g + geom_segment(aes(xend = lags, yend = 0))
       g <- g + ylab("PACF") + xlab("Lag")
       # dashed blue lines corresponding to confidence interval for the autocorrelation under white noise assumption
-      g <- g + geom_hline(yintercept = +1.96/sqrt(nobs), linetype = 2, colour = "blue")
+      g <- g + geom_hline(yintercept = +1.96/sqrt(nobs), linetype = 2, colour = "blue") + ylim(-1,1)
       g <- g + geom_hline(yintercept = -1.96/sqrt(nobs), linetype = 2, colour = "blue")
       pol <- polyroot(c(1, input$theta1, input$theta2))
       polpaste <- paste("root", 1:2, ":", round(pol, 2), collapse = "; ")
