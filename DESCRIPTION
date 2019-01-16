@@ -9,8 +9,8 @@ Description: Companion scripts for the lectures.
 License: What license is it under?
 LazyData: TRUE
 Depends:
-    Rcpp,RcppEigen
+    Rcpp,RcppEigen,astsa,ggplot2,mvtnorm
 Imports:
     Rcpp,RcppEigen (>= 0.11.6)
 LinkingTo: Rcpp,RcppEigen
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.1
